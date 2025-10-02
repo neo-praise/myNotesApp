@@ -1,0 +1,23 @@
+.notes {
+  width: 100%;
+  background: #1c1c1c;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px;
+  justify-content: center;
+  align-items: flex-start;
+  scrollbar-width: none;
+  overflow: auto;
+}
+.empty {
+  width: 100%;
+  height: calc(100vh - 70px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.empty span {
+  color: #ccc;
+  font-size: 12px;
+}
