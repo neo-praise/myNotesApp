@@ -11,6 +11,8 @@ export default function Notes({ notes, setNotes }) {
     note.title.toLowerCase().includes(searchItem.toLowerCase())
   );
 
+  const sortedNotes = [...filteredNotes].sort((a, b) => b.id - a.id);
+
   return (
     <>
       <Header notes={notes} setNotes={setNotes} setSearchItem={setSearchItem} />
@@ -20,7 +22,7 @@ export default function Notes({ notes, setNotes }) {
         </div>
       ) : (
         <div className={Styles.notes}>
-          <NoteLists notes={filteredNotes} />
+          <NoteLists notes={sortedNotes} />
         </div>
       )}
 
